@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <form action="/shorten" method="POST">
+        <input type="url" name="originalUrl" placeholder="Enter URL here" required>
+        <button type="submit">Shorten</button>
+    </form>
+
+    <% if (shortUrl) { %>
+      <div class="url-container">
+          <label>Your shortened URL:</label>
+          <input type="text" class="short-url-input" value="<%= shortUrl %>" readonly>
+          <button onclick="copyUrl()">Copy</button>
+      </div>
+    <% } %>
+  
+
+    <script>
+        function copyToClipboard() {
+            const shortUrlInput = document.getElementById('shortUrl');
+            shortUrlInput.select();
+            shortUrlInput.setSelectionRange(0, 99999); // For mobile support
+
+            navigator.clipboard.writeText(shortUrlInput.value)
+                .then(() => {
+                    const copyMessage = document.getElementById('copyMessage');
+                    copyMessage.style.display = 'inline';
+                    setTimeout(() => {
+                        copyMessage.style.display = 'none';
+                    }, 2000);
+                })
+                .catch(err => {
+                    alert('Failed to copy URL');
+                });
+        }
+    </script>
+</body>
+</html>
