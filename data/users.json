@@ -3,5 +3,15 @@
     "name": "Kanav",
     "email": "kanav@gmail.com",
     "password": "1234"
+  },
+  {
+    "name": "Kannan",
+    "email": "kannan@gmail.com",
+    "password": "123456"
+  },
+  {
+    "name": "Mridul",
+    "email": "mridul@gmail.com",
+    "password": "123456"
   }
 ]

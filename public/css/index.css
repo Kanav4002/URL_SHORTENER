@@ -3,7 +3,7 @@
 }
 
 body {
-  background: url('/images/background.jpg') no-repeat center center fixed;
+  background: url('/images/background.jpg') no-repeat center center fixed;  
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ h2 {
   color: #ff6333;
 }
 
-form {
+.url-form {
   background: #201773;
   padding: 2rem;
   border-radius: 10px;
