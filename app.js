@@ -20,8 +20,16 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Home route
 app.get('/', (req, res) => {
-    res.render('index', { shortUrl: null });
+  fs.readFile(urlsFile, 'utf8', (err, data) => {
+      if (err) return res.status(500).send('Error reading URL data');
+
+      const urls = JSON.parse(data);
+      const recentUrls = urls.slice(-4); // Get the last 4 URLs for 2x2 grid
+
+      res.render('index', { shortUrl: null, recentUrls });
+  });
 });
+
 
 // Signup page route
 app.get('/signup', (req, res) => {
@@ -90,26 +98,34 @@ app.post('/login', (req, res) => {
 });
 
 // Shorten URL POST route
+let recentUrls = []; // Array to store recent URLs
+
 app.post('/shorten', (req, res) => {
-  const { originalUrl } = req.body;
+    const { originalUrl } = req.body;
 
-  const shortCode = crypto.randomBytes(4).toString('hex');
-  const shortUrl = `http://localhost:3000/${shortCode}`;
+    const shortCode = crypto.randomBytes(4).toString('hex');
+    const shortUrl = `http://localhost:3000/${shortCode}`;
 
-  const newUrl = { shortCode, originalUrl };
+    const newUrl = { shortCode, originalUrl, shortUrl };
 
-  fs.readFile(urlsFile, 'utf8', (err, data) => {
-      if (err) return res.status(500).send('Error reading URL data');
+    fs.readFile(urlsFile, 'utf8', (err, data) => {
+        if (err) return res.status(500).send('Error reading URL data');
 
-      const urls = JSON.parse(data);
-      urls.push(newUrl);
+        const urls = JSON.parse(data);
+        urls.push(newUrl);
 
-      fs.writeFile(urlsFile, JSON.stringify(urls, null, 2), (err) => {
-          if (err) return res.status(500).send('Error saving URL data');
-          res.render('index', { shortUrl });
-      });
-  });
+        fs.writeFile(urlsFile, JSON.stringify(urls, null, 2), (err) => {
+            if (err) return res.status(500).send('Error saving URL data');
+            
+            // Add to recent URLs (keep only last 5)
+            recentUrls.unshift(newUrl);
+            if (recentUrls.length > 5) recentUrls.pop();
+
+            res.render('index', { shortUrl, recentUrls });
+        });
+    });
 });
+
 
 // Redirect shortened URL route
 app.get('/:shortCode', (req, res) => {
