@@ -9,8 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>  
-    <h1>URL Shortener</h1>
+<body>
+    <nav class="navbar">
+      <div class="nav-left">
+          <a href="/" class="logo">ClipCut</a>
+      </div>
+      <div class="nav-right">
+          <a href="/login" class="nav-btn">Login</a>
+          <a href="/signup" class="nav-btn">Signup</a>
+      </div>
+    </nav>
+
+    <h1>Welcome to ClipCut</h1>
     <form class="url-form" action="/shorten" method="POST">
         <input type="url" class="url-input" name="originalUrl" placeholder="Enter URL here" required>
         <button type="submit">Shorten</button>
@@ -26,12 +36,25 @@
     <h2 class="url-title">Recently Shortened URLs</h2>
     <p class="url-about">Here are your shortened URLs! 😆</p>
     <div class="url-grid">
-        <% recentUrls.forEach(url => { %>
-            <div class="url-card" style="background-color: #201773;">
-                <p style="color: #060513;">Short: <a href="<%= url.shortUrl %>" target="_blank"><%= url.shortUrl %></a></p>
-            </div>
-        <% }) %>
+      <% if (recentUrls.length > 0) { %>
+          <% recentUrls.forEach(url => { %>
+              <div class="url-card">
+                  <a href="<%= url.shortUrl %>" target="_blank"><%= url.shortUrl %></a>
+              </div>
+          <% }) %>
+      <% } else { %>
+          <p>No recently shortened URLs yet.</p>
+      <% } %>
     </div>
+  
+    <footer class="footer">
+      <p>&copy; 2025 ClipCut. All rights reserved.</p>
+      <div class="footer-links">
+          <a href="https://github.com/Kanav4002/URL_SHORTENER" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/kanav-kumar-9170602aa/" target="_blank">LinkedIn</a>
+          <a href="https://x.com/KanavDevLog" target="_blank">Twitter</a>
+      </div>
+    </footer>
 
     <script>
         function copyToClipboard() {

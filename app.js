@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
       if (err) return res.status(500).send('Error reading URL data');
 
       const urls = JSON.parse(data);
-      const recentUrls = urls.slice(-4); // Get the last 4 URLs for 2x2 grid
+      const recentUrls = urls.slice(-5);
 
       res.render('index', { shortUrl: null, recentUrls });
   });
