@@ -1,80 +1,52 @@
-:root {
-  --primary: #ffffff;
-  --secondary: #a0a0a0;
-  --accent: #3b82f6;
-  --background: #0f172a;
-  --card-bg: rgba(30, 41, 59, 0.8);
-  --header-bg: #1e293b;
-}
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--background);
-  color: var(--primary);
+  background: #f3f4f6;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100vh;
   margin: 0;
-  padding: 0;
 }
 
 .container {
-  background: var(--card-bg);
-  padding: 40px;
-  border-radius: 8px;
-  text-align: center;
-  width: 380px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
-.container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
+
 h2 {
-  margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
-.blue {
-  color: var(--accent);
-}
-.orange {
-  color: orange;
-}
+
 form {
   display: flex;
   flex-direction: column;
 }
+
 input {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  background: var(--header-bg);
-  color: var(--primary);
+  font-size: 1rem;
 }
-.password-container {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.password-container input {
-  flex: 1;
-}
+
 button {
-  width: 100%;
-  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  padding: 0.8rem;
   border: none;
   border-radius: 5px;
-  background: var(--accent);
-  color: var(--primary);
+  font-size: 1rem;
   cursor: pointer;
-  margin-top: 15px;
 }
 
 button:hover {
-  opacity: 0.9;
+  background: #45a049;
 }
 
 p {
@@ -82,7 +54,7 @@ p {
 }
 
 a {
-  color:var(--accent);
+  color: #4CAF50;
   text-decoration: none;
 }
 
