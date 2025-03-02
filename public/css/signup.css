@@ -26,7 +26,6 @@ body {
   text-align: center;
   width: 380px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .container:hover {
