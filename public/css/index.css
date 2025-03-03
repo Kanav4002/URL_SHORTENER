@@ -132,31 +132,45 @@ button:active {
 }
 
 .navbar a {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
   text-decoration: none;
-  color: gold;
+  color: rgb(57, 59, 174);
 }
 
 .nav-right {
   display: flex;
-  gap: 5px;
+  gap: 0px;
   margin-left: auto;
   margin-right: 15px;
 }
 
-.nav-btn {
+.login-btn {
   text-decoration: none;
   color: white;
   padding: 8px 16px;
-  background: #ff6333;
+  background: #3b82f6;
   border-radius: 5px;
   font-weight: bold;
+  margin-right: 0px;
 }
+
+.signup-btn {
+  margin-left: 0px;
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  background: transparent;  
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
 
 .nav-btn:hover {
   background-color: #ff5e00;
