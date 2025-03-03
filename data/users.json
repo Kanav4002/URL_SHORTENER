@@ -38,5 +38,15 @@
     "name": "Mitul",
     "email": "mitul@gmail.com",
     "password": "mitul1234"
+  },
+  {
+    "name": "Ridhima",
+    "email": "ridhima@gmail.com",
+    "password": "123456"
+  },
+  {
+    "name": "harman",
+    "email": "harman@gmail.com",
+    "password": "123456"
   }
 ]
