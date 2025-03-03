@@ -83,19 +83,23 @@ app.post('/signup', (req, res) => {
 
 // Login POST route
 app.post('/login', (req, res) => {
-  const { email, password } = req.body;
+    const { email, password } = req.body;
 
-  fs.readFile(usersFile, 'utf8', (err, data) => {
-      if (err) return res.status(500).send('Error reading user data');
+    fs.readFile(usersFile, 'utf8', (err, data) => {
+        if (err) return res.status(500).send('Error reading user data');
 
-      const users = JSON.parse(data);
-      const user = users.find(u => u.email === email && u.password === password);
+        const users = JSON.parse(data);
+        const user = users.find(u => u.email === email && u.password === password);
 
-      if (!user) return res.status(400).send('Invalid email or password!');
+        if (!user) {
+            return res.render('login', { error: 'Invalid email or password!' });
+        }
 
-      res.redirect('/');
-  });
+        req.session.user = user.username; // Assuming user has a username
+        res.redirect('/');
+    });
 });
+
 
 // Shorten URL POST route
 let recentUrls = []; // Array to store recent URLs
