@@ -218,5 +218,10 @@
     "shortCode": "8ec7bd05",
     "originalUrl": "https://www.google.com/search?q=ferrari&sca_esv=b666dd20b3ab7682&hl=en-GB&authuser=0&sxsrf=AHTn8zrdA0MlLgoAMeuFhS4ED1e2tEZx3g:1740840417890&source=hp&biw=1680&bih=864&ei=4R3DZ6iPNNrU1e8PtaawuAI&iflsig=ACkRmUkAAAAAZ8Mr8RVAGQjrxDn7POTjDrOwY2Pcj9qP&ved=0ahUKEwjog971j-mLAxVaavUHHTUTDCcQ4dUDCBc&uact=5&oq=ferrari&gs_lp=EgNpbWciB2ZlcnJhcmkyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyCBAAGIAEGLEDMgUQABiABDIIEAAYgAQYsQMyCBAAGIAEGLEDMgsQABiABBixAxiDATIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBSLAHUABYkwZwAHgAkAEAmAGDAaAB4gaqAQMwLje4AQPIAQD4AQGKAgtnd3Mtd2l6LWltZ5gCB6AC9waYAwCSBwMwLjegB_Mh&sclient=img&udm=2#vhid=xmRUW5_nFBwYxM&vssid=mosaic",
     "shortUrl": "http://localhost:3000/8ec7bd05"
+  },
+  {
+    "shortCode": "5785d99b",
+    "originalUrl": "https://www.google.com/search?q=cars&sca_esv=b597786ab811f977&sxsrf=AHTn8zpj7WUiKY7IP4Hb7K5f5RoDk-hgyQ:1741239792352&source=hp&biw=1680&bih=830&ei=8DXJZ9qyE6SMvr0PotvluAs&iflsig=ACkRmUkAAAAAZ8lEAMbkqmi0ddPEqymJz5b8Js4SpygW&ved=0ahUKEwja6qja3_SLAxUkhq8BHaJtGbcQ4dUDCBc&uact=5&oq=cars&gs_lp=EgNpbWciBGNhcnMyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyCBAAGIAEGLEDMggQABiABBixAzIIEAAYgAQYsQMyBRAAGIAEMggQABiABBixAzIIEAAYgAQYsQMyCBAAGIAEGLEDSKsRUNkHWJcQcAF4AJABAJgBiQKgAcsGqgEFMC40LjG4AQPIAQD4AQGKAgtnd3Mtd2l6LWltZ5gCBqAC5QaoAgrCAgoQIxgnGMkCGOoCwgIHECMYJxjJAsICCxAAGIAEGLEDGIMBmAOSApIHBTEuNC4xoAeQKA&sclient=img&udm=2",
+    "shortUrl": "http://localhost:3000/5785d99b"
   }
 ]

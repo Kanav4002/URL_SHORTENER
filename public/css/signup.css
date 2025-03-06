@@ -153,8 +153,8 @@ a:hover {
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  background-color: #201773; /* Matching the form background */
-  color: rgb(0, 123, 255); /* Matching input text color */
+  background-color: #201773;
+  color: rgb(0, 123, 255);
   position: fixed;
   bottom: 0;
   font-size: 14px;
@@ -165,7 +165,7 @@ a:hover {
 }
 
 .footer-links a {
-  color: rgb(0, 123, 255); /* Keeping link color consistent */
+  color: rgb(0, 123, 255);
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
@@ -173,5 +173,5 @@ a:hover {
 
 .footer-links a:hover {
   text-decoration: underline;
-  color: #ff6333; /* A pop of color on hover */
+  color: #ff6333;
 }
